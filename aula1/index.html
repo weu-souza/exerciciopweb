@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>carros</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header form">
+    <h1 class="form header-h1 "> Cadastro de veículos</h1>
+</header>
+<article class="form" >
+    <form class="form">
+            <!--  modelo  -->
+        <section class="formulario-digitado ">
+            <input type="text" name="modelo" id="modelo-veiculo" placeholder="modelo do veiculo">
+            <label for="modelo-veiculo"></label>
+        </section>
+            <!--    cor    -->
+        <section class="formulario-digitado ">
+            <input type="text" name="cor" id="cor-veiculo" placeholder="cor do veiculo">
+            <label for="cor-veiculo"></label>
+        </section>
+<!--    marca    -->
+        <section class="formulario-digitado ">
+            <label>
+                <select>
+                    <option> Escolha uma marca</option>
+                    <option>Volkswagen</option>
+                    <option>Chevrolet</option>
+                    <option>Hyundai</option>
+                    <option>Citröen</option>
+                </select>
+            </label>
+        </section>
+<!--   ano     -->
+        <section class="formulario-digitado ">
+
+            <input name="<nome>"
+                   oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                   type = "number"
+                   placeholder="Ano do carro"
+                   maxlength = "4"
+            id="ano-veiculo"
+            >
+            <label for="ano-veiculo"></label>
+        </section>
+<!--    ja batido    -->
+<section class="formulario-digitado carro-batido">
+    <div class="form"><label class="label-texto">O carro ja foi batido?</label></div>
+    <div >
+        <input type="radio" id="sim" name="ja-batido" value="sim" >
+        <label for="sim" class="label-texto">sim</label>
+    </div>
+    <div class="radio">
+        <input type="radio" id="nao" name="ja-batido" value="nao">
+        <label for="nao" class="label-texto">não</label>
+    </div>
+</section>
+        <!--    nome do proprietario-->
+        <section class="formulario-digitado">
+            <input type="text" id="nome-proprietario" placeholder="nome do proprietario">
+            <label for="nome-proprietario"></label>
+        </section>
+
+        <input type="submit" value="Enviar" class="btn-enviar formulario-digitado">
+    </form>
+
+</article>
+<!--tabela-->
+<article class="form">
+    <section class="">
+        <table>
+            <caption><h2 class="titulo-tabela"> tabela de veículos</h2></caption>
+            <thead>
+            <tr>
+                <th class="conteudo">modelo do veículo</th>
+                <th class="conteudo">cor do veículo</th>
+                <th class="conteudo">marca do veículo</th>
+                <th class="conteudo">ano do veículo</th>
+                <th class="conteudo">já foi batido</th>
+                <th class="conteudo">Nome do proprietário</th>
+
+            </tr>
+            </thead>
+            <tbody >
+            <tr>
+                <td class="tabela-resposta">onix</td>
+                <td class="tabela-resposta">branco</td>
+                <td class="tabela-resposta">Chevrolet</td>
+                <td class="tabela-resposta">2023</td>
+                <td class="tabela-resposta">não</td>
+                <td class="tabela-resposta">joel</td>
+            </tr>
+
+            </tbody>
+            <tfoot><tr>
+                <th >total de veiculos cadastrados</th>
+                <td colspan="6" class="tabela-resposta">1</td>
+
+
+            </tr></tfoot>
+        </table>
+    </section>
+</article>
+
+</body>
+</html>

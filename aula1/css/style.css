@@ -1,0 +1,113 @@
+/*reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/*header*/
+.header{
+    background: #b2b2b2;
+
+}
+.header-h1{
+   padding: 0.125rem;
+    color: #EAEAEA;
+    font: 600 1.875rem Poppins,sans-serif;
+}
+
+/*formulario*/
+.formulario-digitado{
+    margin-bottom: 1.5rem;
+}
+.bg-form{
+    background: #f8f8f8;
+}
+
+.form{
+    display: grid;
+    margin: 0 auto 0.5rem auto;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+
+}
+.btn-enviar{
+    border: #3C4048 solid 0.125rem;
+    border-radius: 0.25rem;
+    cursor:pointer;
+    background: #00ABB3;
+    font: 600 1.125rem Poppins,sans-serif;
+    color: #EAEAEA;
+    padding: 0.313rem;
+}
+.btn-enviar:hover{
+    background: #00bdc5;
+    border: #3C4048 solid 0.125rem;
+}
+input{
+    background: rgba(234, 234, 234, 0.23);
+    padding: 0.313rem;
+    border-bottom: #3C4048 solid;
+    border-radius: 0.125rem;
+}
+input::placeholder{
+    color: #3C4048;
+    font: 400 0.8rem Roboto,sans-serif;
+}
+.carro-batido{
+    padding: 0.313rem;
+    border-bottom: #3C4048 solid;
+    border-radius: 0.125rem;
+
+}
+.label-texto{
+    font: 400 0.8rem Roboto,sans-serif;
+}
+select{
+    background: rgba(234, 234, 234, 0.18);
+    padding: 0.625rem;
+    border-bottom: #3C4048 solid;
+    border-radius: 0.125rem;
+    font: 400 0.8rem Roboto,sans-serif;
+}
+.radio{
+    margin-bottom:0.5rem;
+}
+
+/*tabela*/
+.titulo-tabela{
+    color: #eaeaea;
+    background: #3C4048;
+    font: 1.25rem Poppins,sans-serif;
+    padding: 10px;
+}
+table,th,td{
+    border: 1px solid #3C4048;
+    border-collapse:collapse;
+    padding: 5px 2px;
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.conteudo{
+    text-align: left;
+}
+th{
+    background: #b2b2b2;
+    color: #EAEAEA;
+    font: 0.813rem Poppins,sans-serif;
+}
+.tabela-resposta{
+    color:#3C4048 ;
+    background: #fff;
+    font: 400 0.8rem Roboto,sans-serif;
+}
+.tabela-resposta:hover{
+    background: #EAEAEA;
+}
