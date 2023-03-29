@@ -94,16 +94,16 @@ table,th,td{
 table{
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 90%;
 }
 .conteudo{
     text-align: left;
-}
-th{
     background: #b2b2b2;
     color: #EAEAEA;
     font: 0.813rem Poppins,sans-serif;
+    width: 18%;
 }
+
 .tabela-resposta{
     color:#3C4048 ;
     background: #fff;

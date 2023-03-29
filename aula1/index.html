@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <script src="./js/script.js"></script>
 </head>
 <body>
 <header class="header form">
@@ -25,14 +26,13 @@
             <label for="cor-veiculo"></label>
         </section>
 <!--    marca    -->
-        <section class="formulario-digitado ">
-            <label>
-                <select>
-                    <option> Escolha uma marca</option>
-                    <option>Volkswagen</option>
+        <section class="formulario-digitado"  >
+            <label for="marcas-veiculo">
+                <select id="marcas-veiculo" name="marcas">
+                    <option >Volkswagen</option>
                     <option>Chevrolet</option>
-                    <option>Hyundai</option>
-                    <option>Citröen</option>
+                    <option >Hyundai</option>
+                    <option >Citröen</option>
                 </select>
             </label>
         </section>
@@ -48,6 +48,7 @@
             >
             <label for="ano-veiculo"></label>
         </section>
+
 <!--    ja batido    -->
 <section class="formulario-digitado carro-batido">
     <div class="form"><label class="label-texto">O carro ja foi batido?</label></div>
@@ -59,15 +60,15 @@
         <input type="radio" id="nao" name="ja-batido" value="nao">
         <label for="nao" class="label-texto">não</label>
     </div>
+
 </section>
         <!--    nome do proprietario-->
         <section class="formulario-digitado">
             <input type="text" id="nome-proprietario" placeholder="nome do proprietario">
             <label for="nome-proprietario"></label>
         </section>
-
-        <input type="submit" value="Enviar" class="btn-enviar formulario-digitado">
     </form>
+    <button class="btn-enviar formulario-digitado form" id="btn-enviar" onclick="enviar()">Enviar</button>
 
 </article>
 <!--tabela-->
@@ -75,31 +76,43 @@
     <section class="">
         <table>
             <caption><h2 class="titulo-tabela"> tabela de veículos</h2></caption>
-            <thead>
-            <tr>
-                <th class="conteudo">modelo do veículo</th>
-                <th class="conteudo">cor do veículo</th>
-                <th class="conteudo">marca do veículo</th>
-                <th class="conteudo">ano do veículo</th>
-                <th class="conteudo">já foi batido</th>
-                <th class="conteudo">Nome do proprietário</th>
+            <tbody >
+            <tr id="modelo">
+                <td class="conteudo"  >modelo do veículo</td>
+
 
             </tr>
-            </thead>
-            <tbody >
-            <tr>
-                <td class="tabela-resposta">onix</td>
-                <td class="tabela-resposta">branco</td>
-                <td class="tabela-resposta">Chevrolet</td>
-                <td class="tabela-resposta">2023</td>
-                <td class="tabela-resposta">não</td>
-                <td class="tabela-resposta">joel</td>
+            <tr id="cor">
+                <td class="conteudo">cor do veículo</td>
+
+            </tr>
+
+            <tr id="marca">
+                <td class="conteudo">marca do veículo</td>
+
+            </tr>
+
+            <tr id="ano">
+                <td class="conteudo">ano do veículo</td>
+
+
+            </tr>
+
+            <tr id="batido">
+                <td class="conteudo">já foi batido</td>
+
+            </tr>
+
+            <tr id="proprietario">
+                <td class="conteudo">Nome do proprietário</td>
+
             </tr>
 
             </tbody>
             <tfoot><tr>
-                <th >total de veiculos cadastrados</th>
-                <td colspan="6" class="tabela-resposta">1</td>
+                <th class="conteudo">total de veiculos cadastrados</th>
+
+                <td  class="tabela-resposta" id="contar">0</td>
 
 
             </tr></tfoot>
