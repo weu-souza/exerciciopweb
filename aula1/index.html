@@ -14,7 +14,7 @@
     <h1 class="form header-h1 "> Cadastro de veículos</h1>
 </header>
 <article class="form" >
-    <form class="form">
+    <form class="form" name="formulario">
             <!--  modelo  -->
         <section class="formulario-digitado ">
             <input type="text" name="modelo" id="modelo-veiculo" placeholder="modelo do veiculo">
@@ -29,17 +29,18 @@
         <section class="formulario-digitado"  >
             <label for="marcas-veiculo">
                 <select id="marcas-veiculo" name="marcas">
-                    <option >Volkswagen</option>
-                    <option>Chevrolet</option>
-                    <option >Hyundai</option>
-                    <option >Citröen</option>
+                    <option value="">escolha...</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Citröen">Citröen</option>
                 </select>
             </label>
         </section>
 <!--   ano     -->
         <section class="formulario-digitado ">
 
-            <input name="<nome>"
+            <input name="ano"
                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                    type = "number"
                    placeholder="Ano do carro"
@@ -50,21 +51,24 @@
         </section>
 
 <!--    ja batido    -->
+
 <section class="formulario-digitado carro-batido">
     <div class="form"><label class="label-texto">O carro ja foi batido?</label></div>
+
     <div >
-        <input type="radio" id="sim" name="ja-batido" value="sim" >
+        <input type="radio" id="sim" name="batido" value="sim" >
         <label for="sim" class="label-texto">sim</label>
     </div>
+
     <div class="radio">
-        <input type="radio" id="nao" name="ja-batido" value="nao">
+        <input type="radio" id="nao" name="batido" value="nao">
         <label for="nao" class="label-texto">não</label>
     </div>
 
 </section>
         <!--    nome do proprietario-->
         <section class="formulario-digitado">
-            <input type="text" id="nome-proprietario" placeholder="nome do proprietario">
+            <input type="text" id="nome-proprietario" placeholder="nome do proprietario" name="proprietario">
             <label for="nome-proprietario"></label>
         </section>
         <button type="button" class="btn-enviar formulario-digitado " id="btn-enviar" onclick="enviar()">Enviar</button>
@@ -77,43 +81,23 @@
     <section class="">
         <table>
             <caption><h2 class="titulo-tabela"> tabela de veículos</h2></caption>
-            <tbody >
-            <tr id="modelo" class="tabela-tr">
-                <td class="conteudo"  >modelo do veículo</td>
-
-
+            <thead>
+            <tr>
+                <th class="conteudo"  >modelo do veículo</th>
+                <th class="conteudo">cor do veículo</th>
+                <th class="conteudo">marca do veículo</th>
+                <th class="conteudo">ano do veículo</th>
+                <th class="conteudo">já foi batido</th>
+                <th class="conteudo">Nome do proprietário</th>
             </tr>
-            <tr id="cor" class="tabela-tr">
-                <td class="conteudo">cor do veículo</td>
-
-            </tr>
-
-            <tr id="marca" class="tabela-tr">
-                <td class="conteudo">marca do veículo</td>
-
-            </tr>
-
-            <tr id="ano" class="tabela-tr">
-                <td class="conteudo">ano do veículo</td>
-
-
-            </tr>
-
-            <tr id="batido" class="tabela-tr">
-                <td class="conteudo">já foi batido</td>
-
-            </tr>
-
-            <tr id="proprietario" class="tabela-tr">
-                <td class="conteudo">Nome do proprietário</td>
-
-            </tr>
+            </thead>
+            <tbody id="table-boddy">
 
             </tbody>
             <tfoot><tr>
                 <th class="conteudo">total de veiculos cadastrados</th>
 
-                <td  class="tabela-resposta" id="contar">0</td>
+                <td  class="tabela-resposta" id="contar" colspan="6">0</td>
 
 
             </tr></tfoot>
