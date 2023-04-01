@@ -23,6 +23,7 @@ function enviar() {
 
     tabela(modelo, cor, ano, nomePropietario, marca, escolha)
 
+   
 }
 
 
