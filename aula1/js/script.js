@@ -1,11 +1,17 @@
 function enviar() {
-    //pega os valores do formulario
+    //pega os valores do input com o id modelo-veiculo
     let modelo = document.getElementById("modelo-veiculo").value
+    //pega os valores do input com o id modelo-cor
     let cor = document.getElementById("cor-veiculo").value
+    //pega os valores do input com o id modelo-ano
     let ano = document.getElementById("ano-veiculo").value
+    //pega os valores do input com o id nome-proprietario
     let nomePropietario = document.getElementById("nome-proprietario").value
+    //pega os valores do select com o id modelo-veiculo
     let marca = document.getElementById('marcas-veiculo').value
+    //cria a variavel do input com o atributo "nome = ja-batido"
     let jaBatido = document.getElementsByName("ja-batido")
+    //pega os valores do input com o id ja batido e pega o valor do elemento selecionado
     let escolha = []
     for (let i = 0; i < jaBatido.length; i++) {
         if (jaBatido[i].checked) {
@@ -21,53 +27,32 @@ function enviar() {
 
 
 function tabela(modelo, cor, ano, nomePropietario, marca, escolha) {
-    // guarda o valor pego no formulario
+    // guarda o valor pego no formulario em um array
     let guardarValor = [modelo, cor, marca, ano, escolha, nomePropietario]
-    console.log(guardarValor)
 
-    // cria uma tabela para modelo
-    let modeloTr = document.querySelector('#modelo')
-    let tdMod = document.createElement('td')
-    tdMod.textContent = guardarValor[0]
-    tdMod.className = "tabela-resposta"
-    modeloTr.appendChild(tdMod)
-
-    // cria uma tabela para cor
-    let corTr = document.querySelector('#cor')
-    let tdCor = document.createElement('td')
-    tdCor.textContent = guardarValor[1]
-    tdCor.className = "tabela-resposta"
-   corTr.appendChild(tdCor)
-    // cria uma tabela para marca
-    let marcaTr = document.querySelector('#marca')
-    let tdMarca = document.createElement('td')
-    tdMarca.textContent = guardarValor[2]
-    tdMarca.className = "tabela-resposta"
-    marcaTr.appendChild(tdMarca)
-    // cria uma tabela para ano
-    let anoTr = document.querySelector('#ano')
-    let tdAno = document.createElement('td')
-    tdAno.textContent = guardarValor[3]
-    tdAno.className = "tabela-resposta"
-    anoTr.appendChild(tdAno)
-    // cria uma tabela para batido
-    let jaBatidoTr = document.querySelector('#batido')
-    let tdBatido = document.createElement('td')
-    tdBatido.textContent = guardarValor[4]
-    tdBatido.className = "tabela-resposta"
-    jaBatidoTr.appendChild(tdBatido)
-    // cria uma tabela pra proprietario
-    let proprietarioTr = document.querySelector('#proprietario')
-    let tdProprietario = document.createElement('td')
-    tdProprietario.textContent = guardarValor[5]
-    tdProprietario.className = "tabela-resposta"
-    proprietarioTr.appendChild(tdProprietario)
-//     adiciona 1 no total de veiculos
+    // insere os valores do array na tabela
+    for (let i = 0; i < guardarValor.length; i++) {
+        // pega a tudo do documento que estiver com a classe tabela-tr
+        let tabelaTr = document.getElementsByClassName('tabela-tr')[i]
+        // cria um elemento td na tabela
+        let tdMod = document.createElement('td')
+        // guarda o valor inserido no array pelo input dentro do elemento td
+        tdMod.textContent = guardarValor[i]
+        // cria uma classe tabela-resposta no td(para poder inserir o css que criei com esse mesmo nome)
+        tdMod.className = "tabela-resposta"
+        // insere o td criado dentro do tr (basicamente fala que o td e o filho do tr e o td e pra ser inserido dentro do tr)
+        tabelaTr.appendChild(tdMod)
+    }
+    // cria uma variavel de acordo com o id do html
     let count = document.getElementById('contar')
+    // soma o valor da coluna que inicialmente não existe (colspan e um atributo de td para ele ocupar o
+    // tanto de espaço que for inserido no colspan se for inserido 3, o td ira ocupar 3 espaços na tabela e assim por diante)
+    // como o total de veiculos cadastrados teria que estar no rodape, e ocupar a tabela inteira eu coloquei pra alterar o colspan junto no js
     count.colSpan++
+    // soma +1 e altera o valor que inicialmente e zero
     count.textContent++
-
-    if (count.textContent>29){
+    // desativa o botão quando chegar em 20 veiculos cadastrados para a tabela não ficar feia
+    if (count.textContent>19){
         let btn = document.getElementById('btn-enviar').disabled=true;
     }
 
