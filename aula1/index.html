@@ -77,8 +77,8 @@
 
 </article>
 <!--tabela-->
-<article class="form">
-    <section class="">
+<article class="form ">
+    <section class="tabela-content">
         <table>
             <caption><h2 class="titulo-tabela"> tabela de veículos</h2></caption>
             <thead>
@@ -97,12 +97,21 @@
             <tfoot><tr>
                 <th class="conteudo">total de veiculos cadastrados</th>
 
-                <td  class="tabela-resposta" id="contar" colspan="6">0</td>
+                <td  class="tabela-resposta" id="contar" colspan="5">0</td>
+            </tr>
+            <tr class="sem-borda">
+                <td colspan="6" >
+                    <div class="button-content">
+                        <button class="btn-enviar formulario-digitado " id="excluir-tabela" onclick="excluir()">Excluir</button>
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
 
-
-            </tr></tfoot>
         </table>
     </section>
+
+
 </article>
 
 </body>

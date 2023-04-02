@@ -12,7 +12,7 @@
 }
 .header-h1{
    padding: 0.125rem;
-    color: #EAEAEA;
+    color: #3C4048;
     font: 600 1.875rem Poppins,sans-serif;
 }
 
@@ -34,6 +34,7 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 
 }
+
 .btn-enviar{
     border: #3C4048 solid 0.125rem;
     border-radius: 0.25rem;
@@ -42,11 +43,14 @@ textarea:focus, input:focus, select:focus {
     font: 600 1.125rem Poppins,sans-serif;
     color: #EAEAEA;
     padding: 0.313rem;
+    text-transform: uppercase;
 }
+
 .btn-enviar:hover{
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     color:#3C4048;
     border: #3C4048 solid 0.125rem;
+
 }
 input{
     background: rgba(234, 234, 234, 0.23);
@@ -86,7 +90,6 @@ select{
     padding: 10px;
 }
 table,th,td{
-    border: 1px solid #3C4048;
     border-collapse:collapse;
     padding: 5px 2px;
 }
@@ -94,7 +97,7 @@ table,th,td{
 table{
     width: 100%;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 1200px;
 }
 .conteudo{
     text-align: left;
@@ -102,13 +105,37 @@ table{
     color: #EAEAEA;
     font: 0.813rem Poppins,sans-serif;
     width: 18%;
+    border: 1px solid #3C4048;
 }
 
 .tabela-resposta{
+    border: 1px solid #3C4048;
     color:#3C4048 ;
     background: #fff;
     font: 400 0.8rem Roboto,sans-serif;
 }
 .tabela-resposta:hover{
     background: #EAEAEA;
+}
+
+.tabela-content{
+    display: grid;
+
+
+
+}
+.button-content{
+    /*margin-top: 1.5rem;*/
+    display: flex;
+    justify-content: end;
+
+
+
+}
+.tabela-content .btn-enviar{
+    display: none;
+
+}
+.sem-borda{
+    border: none;
 }

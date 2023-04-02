@@ -20,10 +20,9 @@ function enviar() {
         }
     }
 
-    if (validar()){
+    if (validar()) {
         alert("algum campo ficou vazio ou incorreto,preencha o formulario!!")
-    }
-    else {
+    } else {
         tabela(modelo, cor, ano, nomePropietario, marca, escolha)
     }
 
@@ -36,17 +35,22 @@ function tabela(modelo, cor, ano, nomePropietario, marca, escolha) {
     criarTabela(guardarValor)
 
 
-
 // cria uma variavel de acordo com o id do html
-let count = document.getElementById('contar')
+    let count = document.getElementById('contar')
 // soma +1 e altera o valor que inicialmente e zero
-count.textContent++
-
+    count.textContent++
+//     cria o a variavel para o botão de excluir
+let btnApagar = document.getElementById('excluir-tabela')
+    // cria uma variavel pra mudar o display que inicialmente e none para inline
+    // isso faz o botão que inicialmente e none aparecer na tela
+    btnApagar.style.display = 'inline'
 }
-function criarTabela(guardarValor){
+
+function criarTabela(guardarValor) {
     let tBoddy = document.getElementById('table-boddy')
     // pega a tudo do documento que estiver com a classe tabela-tr
     let tabelaTr = document.createElement('tr')
+    tabelaTr.className = 'tabela-tr'
     // cria um elemento td na tabela
     let tdMod = document.createElement('td')
     let tdCor = document.createElement('td')
@@ -72,14 +76,42 @@ function criarTabela(guardarValor){
     tdJaBatido.className = "tabela-resposta"
     tdPropietario.className = "tabela-resposta"
     // insere o td criado dentro do tr (basicamente fala que o td e o filho do tr e o td e pra ser inserido dentro do tr)
-    tabelaTr.append(tdMod,tdCor,tdMarca,tdAno,tdJaBatido,tdPropietario)
+    tabelaTr.append(tdMod, tdCor, tdMarca, tdAno, tdJaBatido, tdPropietario)
     tBoddy.appendChild(tabelaTr)
 }
-function validar(){
-   return !(document.formulario.modelo.value
-       && document.formulario.cor.value
-       && document.formulario.marcas.value
-       && document.formulario.ano.value
-       && document.formulario.batido.value
-       && document.formulario.proprietario.value);
+
+function validar() {
+    return !(document.formulario.modelo.value
+        && document.formulario.cor.value
+        && document.formulario.marcas.value
+        && document.formulario.ano.value
+        && document.formulario.batido.value
+        && document.formulario.proprietario.value);
+}
+
+// excluir tabela
+function excluir() {
+    // cria o elemento com o id table-boddy
+    let tBoddy = document.getElementById('table-boddy')
+    // pega a classe de nome table-tr
+    let tr = document.querySelector('.tabela-tr')
+    // pega a classe com o nome tabela-resposta
+    let td = document.querySelector('.tabela-resposta')
+   // remove o filho de tr
+    tr.removeChild(td)
+   // remove o filho do tboddy
+    tBoddy.removeChild(tr)
+    // cria a variavel pra subtrair o total
+    let count = document.getElementById('contar')
+// subtrai 1 e altera o valor de conunt
+    count.textContent--
+    // verifica se o total esta igual a zero e esconde o botão de excluir
+    if (count.textContent === '0'){
+        let btnApagar = document.getElementById('excluir-tabela')
+        // muda o botão que inicialmente e inline para none
+        // isso faz o boão sumir novamente
+        btnApagar.style.display = 'none'
+    }
+
+
 }
