@@ -149,15 +149,13 @@ table, th, td {
 table {
     margin-top: 1.5rem;
     margin-right: 5px;
+  width: 1200px;
 }
 
 .tabela-container {
     display: flex;
     margin: 0 auto;
-
-    max-width: 100%;
     flex-wrap: wrap;
-
 }
 
 .button-container {
@@ -167,10 +165,12 @@ table {
 
 .tabela-container .btn-enviar {
     display: none;
-
-
 }
 
-.sem-borda {
-    border: none;
+@media(max-width: 1000px){
+    table {
+        margin-top: 1.5rem;
+        margin-right: 5px;
+        width: 100%;
+    }
 }
