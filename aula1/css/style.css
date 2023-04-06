@@ -17,7 +17,7 @@
 .header-h1 {
     padding: 0.125rem;
 
-    color: #3C4048;
+    color: #EAEAEA;
     font: 600 1.875rem Poppins, sans-serif;
 
 
@@ -31,12 +31,9 @@
 }
 
 .form-bg {
-    /*border: 1px solid #000;*/
+    border: 1px solid #3C4048;
     background: #f8f8f8;
-
     max-width: 100%;
-
-
 }
 
 .primeiro-form {
@@ -48,6 +45,8 @@
     margin: 0 auto 0.5rem auto;
 
 }
+
+
 
 textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
@@ -72,12 +71,18 @@ textarea:focus, input:focus, select:focus {
     border: #3C4048 solid 0.125rem;
 
 }
+option{
+    background: #b2b2b2;
+    color: #EAEAEA;
+    font: 400 0.8rem Roboto, sans-serif;
+}
 
 input {
     background: rgba(234, 234, 234, 0.23);
     padding: 0.313rem;
     border-bottom: #3C4048 solid;
     border-radius: 0.125rem;
+    font: 400 0.8rem Roboto, sans-serif;
 }
 
 input::placeholder {
