@@ -13,10 +13,10 @@
 <header class="header form">
     <h1 class="form header-h1 "> Cadastro de veículos</h1>
 </header>
-<article class="form" >
-    <form class="form" name="formulario">
+<article class="form " >
+    <form class="form form-bg " name="formulario" >
             <!--  modelo  -->
-        <section class="formulario-digitado ">
+        <section class="formulario-digitado primeiro-form">
             <input type="text" name="modelo" id="modelo-veiculo" placeholder="modelo do veiculo">
             <label for="modelo-veiculo"></label>
         </section>
@@ -78,7 +78,11 @@
 </article>
 <!--tabela-->
 <article class="form ">
-    <section class="tabela-content">
+    <section class="tabela-container">
+        <div class="button-container">
+            <button class="btn-enviar" id="excluir-tabela" onclick="excluir()">Excluir</button>
+        </div>
+
         <table>
             <caption><h2 class="titulo-tabela"> tabela de veículos</h2></caption>
             <thead>
@@ -101,14 +105,13 @@
             </tr>
             <tr class="sem-borda">
                 <td colspan="6" >
-                    <div class="button-content">
-                        <button class="btn-enviar formulario-digitado " id="excluir-tabela" onclick="excluir()">Excluir</button>
-                    </div>
+
                 </td>
             </tr>
             </tfoot>
 
         </table>
+
     </section>
 
 

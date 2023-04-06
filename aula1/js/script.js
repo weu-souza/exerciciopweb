@@ -99,3 +99,4 @@ function excluir() {
         btnApagar.style.display = 'none'
     }
 }
+
